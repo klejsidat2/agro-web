@@ -1,0 +1,47 @@
+<section class="page">
+  <a routerLink="/products" class="back">{{ 'CATEGORY.BACK' | translate }}</a>
+
+  @if (info(); as cat) {
+    <header class="head">
+      <p class="kicker">{{ 'CATEGORY.KICKER' | translate }}</p>
+      <h1>{{ cat.name | loc }}</h1>
+      <span class="rule"></span>
+      <p class="lead">{{ cat.description | loc }}</p>
+    </header>
+
+    @if (products().length === 0) {
+      <p class="empty">{{ 'CATEGORY.EMPTY' | translate }}</p>
+    } @else {
+      <div class="grid">
+        @for (p of products(); track p.id) {
+          <a class="card" [routerLink]="['/products', category(), p.id]">
+            <div class="img">
+              @if (p.image) {
+                <img [src]="p.image" [alt]="p.name" />
+              } @else {
+                <span>{{ 'PRODUCT.NO_PHOTO' | translate }}</span>
+              }
+            </div>
+
+            <div class="body">
+              <h2>{{ p.name }}</h2>
+              <p>{{ p.shortDescription | loc }}</p>
+
+              @if (p.packaging) {
+                <div class="tags">
+                  @for (pk of p.packaging; track pk) {
+                    <span>{{ pk }}</span>
+                  }
+                </div>
+              }
+
+              <span class="more">{{ 'PRODUCT.DETAILS' | translate }}</span>
+            </div>
+          </a>
+        }
+      </div>
+    }
+  } @else {
+    <p class="empty">{{ 'CATEGORY.NOT_FOUND' | translate }}</p>
+  }
+</section>

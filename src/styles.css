@@ -1,0 +1,362 @@
+/* =========================================================
+   FLOVIS SHPK — stilet e përbashkëta për gjithë webin
+   Ngjyrat janë marrë nga logoja.
+   ========================================================= */
+
+:root {
+  --ink: #0f2113; /* sfondi i errët i logos */
+  --ink-soft: #17301b;
+  --ink-2: #1f3d23;
+  --green: #6aa84f; /* gjelbërimi kryesor */
+  --green-light: #8cc56c;
+  --green-dark: #3f7734; /* gjelbërimi i shkronjave të logos */
+  --lime: #b5d96a; /* theks i lehtë */
+  --cream: #f5f6ef; /* sfondi i faqes */
+  --paper: #ffffff; /* sfondi i kartave */
+  --soft: #eef3e6; /* sfond i lehtë jeshil */
+  --line: #e1e6d8;
+  --text: #182619;
+  --muted: #5d6a5a;
+
+  --radius: 20px;
+  --shadow-sm: 0 2px 10px rgba(15, 33, 19, 0.06);
+  --shadow: 0 14px 34px rgba(15, 33, 19, 0.09);
+  --shadow-lg: 0 28px 60px rgba(15, 33, 19, 0.18);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--green);
+  color: #fff;
+}
+
+/* ===== Faqja ===== */
+.page {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+/* ===== Titulli i faqeve (shirit i errët në gjithë gjerësinë) ===== */
+/* ===== Titulli i faqeve (i thjeshtë, mbi sfondin e çelët) ===== */
+.head {
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0 2.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.head > * {
+  animation: rise 0.8s var(--ease) both;
+}
+.head > :nth-child(2) { animation-delay: 0.08s; }
+.head > :nth-child(3) { animation-delay: 0.16s; }
+.head > :nth-child(4) { animation-delay: 0.24s; }
+.head > :nth-child(5) { animation-delay: 0.32s; }
+
+.head h1 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+.head .back {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto 1.2rem;
+}
+
+/* ===== Elementë teksti ===== */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+.kicker::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.rule {
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 1.3rem auto;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--green), var(--lime));
+}
+
+.lead {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Titulli i seksioneve brenda faqes */
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.heading h2 {
+  margin: 0;
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+}
+.heading .rule {
+  margin-bottom: 0;
+}
+
+/* ===== Butonat ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.9rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--green-light), var(--green));
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 10px 24px -8px rgba(106, 168, 79, 0.6);
+  transition:
+    transform 0.25s var(--ease),
+    box-shadow 0.25s,
+    background 0.25s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px -10px rgba(106, 168, 79, 0.75);
+}
+.btn.ghost {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  box-shadow: none;
+  backdrop-filter: blur(6px);
+}
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.btn.dark {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 0 10px 24px -10px rgba(15, 33, 19, 0.6);
+}
+.btn.dark:hover {
+  background: var(--ink-2);
+}
+
+/* ===== Kartat ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+.grid > div {
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    transform 0.45s var(--ease),
+    box-shadow 0.45s var(--ease),
+    border-color 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(106, 168, 79, 0.45);
+}
+
+/* Karta e kategorisë (Home + Kategoritë) */
+.cat-card {
+  overflow: hidden;
+  padding: 2rem 1.8rem 1.8rem;
+}
+.cat-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--lime));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease);
+}
+.cat-card:hover::before {
+  transform: scaleX(1);
+}
+.cat-card .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1.3rem;
+  border-radius: 16px;
+  background: var(--soft);
+  color: var(--green-dark);
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    transform 0.4s var(--ease);
+}
+.cat-card:hover .num {
+  background: var(--green);
+  color: #fff;
+  transform: rotate(-8deg) scale(1.06);
+}
+.cat-card h2,
+.cat-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.45rem;
+}
+.cat-card p {
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+}
+
+.more {
+  display: inline-block;
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: transform 0.3s var(--ease);
+}
+.card:hover .more {
+  transform: translateX(5px);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.tags span {
+  padding: 0.22rem 0.75rem;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--green-dark);
+  font-size: 0.76rem;
+  font-weight: 500;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  color: var(--green-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.back:hover {
+  color: var(--ink);
+}
+
+.empty {
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ===== Animacionet ===== */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Shfaqje e butë kur elementi del në ekran (appReveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s var(--ease);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

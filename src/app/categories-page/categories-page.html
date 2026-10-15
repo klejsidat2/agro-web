@@ -1,0 +1,18 @@
+<section class="page">
+  <header class="head">
+    <p class="kicker">{{ 'CATEGORIES.KICKER' | translate }}</p>
+    <h1>{{ 'CATEGORIES.TITLE' | translate }}</h1>
+    <span class="rule"></span>
+    <p class="lead">{{ 'CATEGORIES.LEAD' | translate }}</p>
+  </header>
+
+  <div class="grid">
+    @for (c of categories; track c.slug) {
+      <a class="card" [routerLink]="['/products', c.slug]">
+        <h2>{{ c.name | loc }}</h2>
+        <p>{{ c.description | loc }}</p>
+        <span class="more">{{ 'CATEGORIES.VIEW' | translate }}</span>
+      </a>
+    }
+  </div>
+</section>

@@ -1,0 +1,208 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+/* Rruga lart */
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.crumbs a {
+  color: var(--green-dark);
+  text-decoration: none;
+}
+.crumbs a:hover {
+  text-decoration: underline;
+}
+.crumbs strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Dy kolona: foto majtas, info djathtas */
+.layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 440px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #eef2e4;
+  color: var(--muted);
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1.5rem;
+}
+
+.cat {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+h1 {
+  margin: 0.4rem 0 0;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+.rule {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin: 1.2rem 0 1.4rem;
+  border-radius: 2px;
+  background: var(--green);
+}
+.desc {
+  margin: 0 0 1.5rem;
+  line-height: 1.8;
+}
+
+h3 {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+.row {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.5rem;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.tags span {
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  font-size: 0.85rem;
+}
+
+.usage {
+  padding: 1.2rem 1.4rem;
+  border-left: 3px solid var(--green);
+  border-radius: 0 10px 10px 0;
+  background: #eef3e2;
+}
+.usage p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Butonat */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn.green {
+  background: var(--green);
+  color: var(--ink);
+}
+.btn.dark {
+  background: var(--ink);
+  color: #fff;
+}
+.note {
+  margin: 0.9rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Produkte të tjera */
+.related {
+  margin-top: 4rem;
+}
+.related h2 {
+  margin: 0 0 1.5rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+.card {
+  display: block;
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green);
+}
+.card h3 {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1.1rem;
+}
+.card p {
+  margin: 0 0 0.8rem;
+  color: var(--muted);
+}
+.more {
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.back {
+  color: var(--green-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+.empty {
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Në telefon: një kolonë */
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .photo {
+    height: 280px;
+  }
+}

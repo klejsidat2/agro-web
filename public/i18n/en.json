@@ -1,0 +1,98 @@
+{
+  "SITE": {
+    "MOTTO": "The choice of every smart farmer"
+  },
+  "NAV": {
+    "MENU": "Menu",
+    "CLOSE": "Close",
+    "HOME": "Home",
+    "PRODUCTS": "Product Categories",
+    "ABOUT": "About Us",
+    "CONTACT": "Contact & Location"
+  },
+  "LANGUAGE": {
+    "TITLE": "Choose language"
+  },
+  "HOME": {
+    "VIEW_PRODUCTS": "View products",
+    "FIND_US": "Find us",
+    "CAT_KICKER": "What we sell",
+    "CAT_TITLE": "Product Categories",
+    "VIEW_CATEGORY": "View products →",
+    "SERV_KICKER": "How we help",
+    "SERV_TITLE": "Our services",
+    "S1_TITLE": "Field visits and diagnosis",
+    "S1_TEXT": "We come and take a close look at your plants and crops to identify the disease and the right treatment.",
+    "S2_TITLE": "Retail and wholesale",
+    "S2_TEXT": "We supply small farmers as well as businesses and traders who buy in large quantities.",
+    "S3_TITLE": "Agronomic advice",
+    "S3_TEXT": "We help you choose the right product, dose and timing for your crop.",
+    "CTA_TITLE": "Having a problem with your crop?",
+    "CTA_TEXT": "Give us a call or visit the shop. We will help you find the right solution."
+  },
+    "CATEGORIES": {
+    "KICKER": "Catalogue",
+    "TITLE": "Product Categories",
+    "LEAD": "Choose a category to see the products we offer.",
+    "VIEW": "View products →"
+  },
+  "CATEGORY": {
+    "KICKER": "Category",
+    "BACK": "← All categories",
+    "EMPTY": "No products in this category yet.",
+    "NOT_FOUND": "This category does not exist."
+  },
+  "PRODUCT": {
+    "DETAILS": "Details →",
+    "NO_PHOTO": "Photo coming soon",
+    "CATEGORIES": "Categories",
+    "PACKAGING": "Pack sizes",
+    "USAGE": "How to use",
+    "ASK_WHATSAPP": "Ask on WhatsApp",
+    "CALL": "Call us",
+    "NOTE": "Contact us for price and availability.",
+    "RELATED": "More in this category",
+    "NOT_FOUND": "This product was not found.",
+    "WHATSAPP_TEXT": "Hello, I would like information about: {{name}}"
+  },
+    "ABOUT": {
+    "KICKER": "Who we are",
+    "TITLE": "About Us",
+    "LEAD": "Since {{year}}, {{name}} has stood by farmers with quality products, sound advice and real care for every crop.",
+    "STORY_TITLE": "Our story",
+    "STORY_1": "{{name}} opened its doors in {{year}} with a simple goal: to give farmers what they need for a healthy and plentiful harvest.",
+    "STORY_2": "Over these {{years}} years we have grown together with our customers. Today we offer a wide range of fertilizers, seeds and crop protection products, both retail and wholesale.",
+    "STORY_3": "But what sets us apart is not just our products. It is our knowledge. We come to your field, look closely at your plants, identify the disease and give you the right solution, because every crop and every farmer deserves special care.",
+    "STAT_FOUNDED": "year founded",
+    "STAT_YEARS": "years of experience",
+    "STAT_SALES": "Retail & wholesale",
+    "STAT_SALES_LABEL": "for farmers and businesses",
+    "MISSION_TITLE": "Our mission",
+    "MISSION_TEXT": "To give farmers reliable products and professional advice, so they get more from their land while keeping it healthy for the generations to come.",
+    "VALUES_TITLE": "Our values",
+    "V1_TITLE": "Trust",
+    "V1_TEXT": "We only recommend what your crop really needs, not what costs the most.",
+    "V2_TITLE": "Experience",
+    "V2_TEXT": "We know the local soil, climate and crops, because we have worked with them every day since {{year}}.",
+    "V3_TITLE": "Close to farmers",
+    "V3_TEXT": "We don't stop at the sale. We come to the field, look at your plants and stay by your side until harvest.",
+    "VISIT_TITLE": "Visit us",
+    "VISIT_TEXT": "Come to the shop or give us a call. You will always find someone ready to listen and help."
+  },
+  "CONTACT": {
+    "KICKER": "Get in touch",
+    "TITLE": "Contact & Location",
+    "LEAD": "We are here for any question about products, orders or problems with your crops.",
+    "ADDRESS": "Address",
+    "PHONE": "Phone",
+    "EMAIL": "Email",
+    "HOURS": "Opening hours",
+    "EVERYDAY": "Every day",
+    "LOCATION_KICKER": "Location",
+    "LOCATION_TITLE": "Where to find us",
+    "DIRECTIONS": "Get directions →"
+  },
+  "FOOTER": {
+    "RIGHTS": "All rights reserved."
+  }
+}

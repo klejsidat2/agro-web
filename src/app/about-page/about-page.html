@@ -1,0 +1,55 @@
+<section class="page">
+  <header class="head">
+    <p class="kicker">{{ 'ABOUT.KICKER' | translate }}</p>
+    <h1>{{ 'ABOUT.TITLE' | translate }}</h1>
+    <span class="rule"></span>
+    <p class="lead">{{ 'ABOUT.LEAD' | translate: params }}</p>
+  </header>
+
+  <div class="story">
+    <div class="text">
+      <h2>{{ 'ABOUT.STORY_TITLE' | translate }}</h2>
+      <p>{{ 'ABOUT.STORY_1' | translate: params }}</p>
+      <p>{{ 'ABOUT.STORY_2' | translate: params }}</p>
+      <p>{{ 'ABOUT.STORY_3' | translate }}</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>{{ site.founded }}</strong>
+        <span>{{ 'ABOUT.STAT_FOUNDED' | translate }}</span>
+      </div>
+      <div class="stat">
+        <strong>{{ years }}+</strong>
+        <span>{{ 'ABOUT.STAT_YEARS' | translate }}</span>
+      </div>
+      <div class="stat">
+        <strong>{{ 'ABOUT.STAT_SALES' | translate }}</strong>
+        <span>{{ 'ABOUT.STAT_SALES_LABEL' | translate }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mission">
+    <h2>{{ 'ABOUT.MISSION_TITLE' | translate }}</h2>
+    <p>{{ 'ABOUT.MISSION_TEXT' | translate }}</p>
+    <p class="quote">"{{ 'SITE.MOTTO' | translate }}"</p>
+  </div>
+
+  <h2 class="center">{{ 'ABOUT.VALUES_TITLE' | translate }}</h2>
+  <div class="cards">
+    @for (v of values; track v) {
+      <div class="card">
+        <span class="num">0{{ v }}</span>
+        <h3>{{ 'ABOUT.V' + v + '_TITLE' | translate }}</h3>
+        <p>{{ 'ABOUT.V' + v + '_TEXT' | translate: params }}</p>
+      </div>
+    }
+  </div>
+
+  <div class="visit">
+    <h2>{{ 'ABOUT.VISIT_TITLE' | translate }}</h2>
+    <p>{{ 'ABOUT.VISIT_TEXT' | translate }}</p>
+    <a routerLink="/contact" class="btn">{{ 'NAV.CONTACT' | translate }}</a>
+  </div>
+</section>

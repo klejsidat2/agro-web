@@ -1,0 +1,73 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.kicker {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+.rule {
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin: 1.2rem auto;
+  border-radius: 2px;
+  background: var(--green);
+}
+.lead {
+  margin: 0;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: block;
+  padding: 1.8rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+  box-shadow: 0 18px 36px rgba(18, 36, 26, 0.15);
+}
+.card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+.card p {
+  margin: 0 0 1.2rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.more {
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,45 @@
+<header [class.scrolled]="scrolled()">
+  <a routerLink="/home" class="brand">
+    <img [src]="site.logo" alt="" />
+    <span>{{ site.name }}</span>
+  </a>
+
+  <div class="right">
+    <app-language-switcher />
+
+    <button
+      type="button"
+      class="menu-btn"
+      [class.open]="open()"
+      [attr.aria-expanded]="open()"
+      (click)="toggle()"
+    >
+      <span class="label">{{ (open() ? 'NAV.CLOSE' : 'NAV.MENU') | translate }}</span>
+      <span class="burger"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<!-- Sfondi i errët pas menusë -->
+<div class="overlay" [class.show]="open()" (click)="close()"></div>
+
+<!-- Menuja që hapet nga e djathta -->
+<nav class="drawer" [class.show]="open()">
+  @for (l of links; track l.path; let i = $index) {
+    <a
+      [routerLink]="l.path"
+      routerLinkActive="active"
+      [style.--i]="i"
+      [attr.tabindex]="open() ? 0 : -1"
+      (click)="close()"
+    >
+      <span class="n">0{{ i + 1 }}</span>
+      {{ l.key | translate }}
+    </a>
+  }
+
+  <div class="drawer-foot">
+    <img [src]="site.logo" alt="" />
+    <p>"{{ 'SITE.MOTTO' | translate }}"</p>
+  </div>
+</nav>

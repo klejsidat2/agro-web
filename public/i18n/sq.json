@@ -1,0 +1,98 @@
+{
+  "SITE": {
+    "MOTTO": "Zgjedhja e çdo fermeri të zgjuar"
+  },
+  "NAV": {
+    "MENU": "Menu",
+    "CLOSE": "Mbyll",
+    "HOME": "Kryefaqja",
+    "PRODUCTS": "Kategoritë e produkteve",
+    "ABOUT": "Rreth nesh",
+    "CONTACT": "Kontakt & Lokacioni"
+  },
+  "LANGUAGE": {
+    "TITLE": "Zgjidh gjuhën"
+  },
+  "HOME": {
+    "VIEW_PRODUCTS": "Shiko produktet",
+    "FIND_US": "Na gjeni",
+    "CAT_KICKER": "Çfarë shesim",
+    "CAT_TITLE": "Kategoritë e produkteve",
+    "VIEW_CATEGORY": "Shiko produktet →",
+    "SERV_KICKER": "Si ju ndihmojmë",
+    "SERV_TITLE": "Shërbimet tona",
+    "S1_TITLE": "Vizitë në fushë dhe diagnostikim",
+    "S1_TEXT": "Vijmë dhe shikojmë nga afër bimët dhe prodhimin për të vlerësuar sëmundjen dhe trajtimin e duhur.",
+    "S2_TITLE": "Shitje me pakicë dhe shumicë",
+    "S2_TEXT": "Furnizojmë si fermerët e vegjël, ashtu edhe bizneset dhe tregtarët me sasi të mëdha.",
+    "S3_TITLE": "Këshillim agronomik",
+    "S3_TEXT": "Ju ndihmojmë të zgjidhni produktin, dozën dhe kohën e duhur për kulturën tuaj.",
+    "CTA_TITLE": "Keni një problem me kulturën tuaj?",
+    "CTA_TEXT": "Na telefononi ose ejani në dyqan. Ju ndihmojmë të gjeni zgjidhjen e duhur."
+  },
+    "CATEGORIES": {
+    "KICKER": "Katalogu",
+    "TITLE": "Kategoritë e produkteve",
+    "LEAD": "Zgjidhni një kategori për të parë produktet që ofrojmë.",
+    "VIEW": "Shiko produktet →"
+  },
+  "CATEGORY": {
+    "KICKER": "Kategoria",
+    "BACK": "← Të gjitha kategoritë",
+    "EMPTY": "Nuk ka produkte në këtë kategori ende.",
+    "NOT_FOUND": "Kjo kategori nuk ekziston."
+  },
+  "PRODUCT": {
+    "DETAILS": "Detaje →",
+    "NO_PHOTO": "Foto së shpejti",
+    "CATEGORIES": "Kategoritë",
+    "PACKAGING": "Paketimi",
+    "USAGE": "Përdorimi",
+    "ASK_WHATSAPP": "Pyet në WhatsApp",
+    "CALL": "Telefono",
+    "NOTE": "Për çmimin dhe disponueshmërinë, na kontaktoni.",
+    "RELATED": "Produkte të tjera në këtë kategori",
+    "NOT_FOUND": "Ky produkt nuk u gjet.",
+    "WHATSAPP_TEXT": "Përshëndetje, dua informacion për produktin: {{name}}"
+  },
+    "ABOUT": {
+    "KICKER": "Kush jemi",
+    "TITLE": "Rreth nesh",
+    "LEAD": "Që nga viti {{year}}, {{name}} është pranë fermerëve me produkte cilësore, këshilla të sakta dhe përkushtim për çdo kulturë.",
+    "STORY_TITLE": "Historia jonë",
+    "STORY_1": "{{name}} hapi dyert në vitin {{year}} me një qëllim të thjeshtë: t'u japë fermerëve atë që u duhet për një prodhim të shëndetshëm dhe të begatë.",
+    "STORY_2": "Gjatë këtyre {{years}} viteve jemi rritur bashkë me klientët tanë. Sot ofrojmë një gamë të gjerë plehrash, farërash dhe produktesh për mbrojtjen e bimëve, me shitje me pakicë dhe shumicë.",
+    "STORY_3": "Por ajo që na dallon nuk janë vetëm produktet. Është njohuria. Ne vijmë në fushë, i shohim bimët nga afër, vlerësojmë sëmundjen dhe ju japim zgjidhjen e duhur, sepse çdo kulturë dhe çdo fermer meritojnë kujdes të veçantë.",
+    "STAT_FOUNDED": "viti i themelimit",
+    "STAT_YEARS": "vite eksperiencë",
+    "STAT_SALES": "Pakicë & shumicë",
+    "STAT_SALES_LABEL": "për fermerë dhe biznese",
+    "MISSION_TITLE": "Misioni ynë",
+    "MISSION_TEXT": "T'u ofrojmë fermerëve produkte të besueshme dhe këshilla profesionale, që të marrin më shumë nga toka e tyre duke e ruajtur atë të shëndetshme për brezat që vijnë.",
+    "VALUES_TITLE": "Vlerat tona",
+    "V1_TITLE": "Besueshmëri",
+    "V1_TEXT": "Rekomandojmë vetëm atë që i duhet vërtet kulturës suaj, jo atë që shitet më shtrenjtë.",
+    "V2_TITLE": "Eksperiencë",
+    "V2_TEXT": "Njohim tokën, klimën dhe kulturat e zonës, sepse punojmë me to çdo ditë që nga viti {{year}}.",
+    "V3_TITLE": "Pranë fermerit",
+    "V3_TEXT": "Nuk mjaftohemi me shitjen. Vijmë në fushë, shohim bimët dhe qëndrojmë pranë jush deri në korrje.",
+    "VISIT_TITLE": "Na vizitoni",
+    "VISIT_TEXT": "Ejani në dyqan ose na telefononi. Do të gjeni gjithmonë dikë që ju dëgjon dhe ju ndihmon."
+  },
+  "CONTACT": {
+    "KICKER": "Na kontaktoni",
+    "TITLE": "Kontakt & Lokacioni",
+    "LEAD": "Jemi këtu për çdo pyetje mbi produktet, porositë apo problemet me kulturat tuaja.",
+    "ADDRESS": "Adresa",
+    "PHONE": "Telefon",
+    "EMAIL": "Email",
+    "HOURS": "Orari",
+     "EVERYDAY": "Çdo ditë",
+    "LOCATION_KICKER": "Lokacioni",
+    "LOCATION_TITLE": "Ku ndodhemi",
+    "DIRECTIONS": "Merr udhëzime →"
+  },
+  "FOOTER": {
+    "RIGHTS": "Të gjitha të drejtat të rezervuara."
+  }
+}

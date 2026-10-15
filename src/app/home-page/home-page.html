@@ -1,0 +1,71 @@
+<!-- ===== Pjesa e sipërme me foto ===== -->
+<section class="hero">
+  @if (heroOk()) {
+    <img class="bg" [src]="site.heroImage" alt="" (error)="heroOk.set(false)" />
+  }
+  <div class="shade"></div>
+
+  <div class="content">
+    @if (logoOk()) {
+      <img class="logo" [src]="site.logo" [alt]="site.name" (error)="logoOk.set(false)" />
+    }
+    <h1>{{ site.name }}</h1>
+    <p class="motto">{{ 'SITE.MOTTO' | translate }}</p>
+    <span class="rule"></span>
+
+    <div class="actions">
+      <a routerLink="/products" class="btn green">{{ 'HOME.VIEW_PRODUCTS' | translate }}</a>
+      <a routerLink="/contact" class="btn ghost">{{ 'HOME.FIND_US' | translate }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Kategoritë ===== -->
+<section class="block">
+  <div class="heading">
+    <p class="kicker">{{ 'HOME.CAT_KICKER' | translate }}</p>
+    <h2>{{ 'HOME.CAT_TITLE' | translate }}</h2>
+    <span class="rule small"></span>
+  </div>
+
+  <div class="grid">
+    @for (c of categories; track c.slug) {
+      <a class="card" [routerLink]="['/products', c.slug]">
+        <h3>{{ c.name | loc }}</h3>
+        <p>{{ c.description | loc }}</p>
+        <span class="more">{{ 'HOME.VIEW_CATEGORY' | translate }}</span>
+      </a>
+    }
+  </div>
+</section>
+
+<!-- ===== Shërbimet ===== -->
+<section class="services">
+  <div class="inner">
+    <div class="heading light">
+      <p class="kicker">{{ 'HOME.SERV_KICKER' | translate }}</p>
+      <h2>{{ 'HOME.SERV_TITLE' | translate }}</h2>
+      <span class="rule small"></span>
+    </div>
+
+    <div class="grid">
+      @for (s of services; track s.key) {
+        <div class="service">
+          <span class="icon">{{ s.icon }}</span>
+          <h3>{{ 'HOME.' + s.key + '_TITLE' | translate }}</h3>
+          <p>{{ 'HOME.' + s.key + '_TEXT' | translate }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ===== Thirrja për kontakt ===== -->
+<section class="cta">
+  <h2>{{ 'HOME.CTA_TITLE' | translate }}</h2>
+  <p>{{ 'HOME.CTA_TEXT' | translate }}</p>
+  <div class="actions">
+    <a [href]="'tel:' + site.phoneHref" class="btn green">{{ site.phone }}</a>
+    <a routerLink="/contact" class="btn dark">{{ 'NAV.CONTACT' | translate }}</a>
+  </div>
+</section>

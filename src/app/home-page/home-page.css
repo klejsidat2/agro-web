@@ -1,0 +1,230 @@
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: min(85vh, 720px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  /* sfondi kur s'ka foto */
+  background:
+    radial-gradient(ellipse at 50% 0%, #3d6b2c 0%, transparent 65%),
+    var(--ink);
+}
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom 25s ease-in-out infinite alternate;
+}
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 22, 15, 0.55),
+    rgba(10, 22, 15, 0.35) 45%,
+    rgba(10, 22, 15, 0.85)
+  );
+}
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  padding: 4rem 1.5rem;
+  animation: rise 1s ease both;
+}
+.logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 0 auto 1.2rem;
+}
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 8vw, 4.8rem);
+  line-height: 1.1;
+}
+.motto {
+  margin: 1rem auto 0;
+  max-width: 560px;
+  font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+  font-style: italic;
+  color: #e3ebd0;
+}
+.rule {
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 1.8rem auto 2.2rem;
+  border-radius: 2px;
+  background: var(--green);
+}
+.rule.small {
+  margin: 1rem auto 0;
+}
+
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ===== Butonat ===== */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn.green {
+  background: var(--green);
+  color: var(--ink);
+}
+.btn.ghost {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.btn.dark {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* ===== Seksionet ===== */
+.block {
+  max-width: 1100px;
+  margin: 5rem auto 0;
+  padding: 0 1.5rem;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.kicker {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+.heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Kartat e kategorive */
+.card {
+  display: block;
+  padding: 1.8rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+  box-shadow: 0 18px 36px rgba(18, 36, 26, 0.15);
+}
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+}
+.card p {
+  margin: 0 0 1.2rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.more {
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ===== Shërbimet (sfond i errët) ===== */
+.services {
+  margin-top: 5rem;
+  padding: 4.5rem 1.5rem;
+  background: linear-gradient(180deg, var(--ink-soft), var(--ink));
+}
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.heading.light h2 {
+  color: #fff;
+}
+.heading.light .kicker {
+  color: var(--green);
+}
+.service {
+  padding: 1.8rem;
+  border: 1px solid rgba(127, 178, 58, 0.25);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #c9d4b8;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.service:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+}
+.icon {
+  font-size: 2rem;
+}
+.service h3 {
+  margin: 0.8rem 0 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.service p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ===== Thirrja për kontakt ===== */
+.cta {
+  max-width: 800px;
+  margin: 5rem auto 0;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+.cta h2 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+}
+.cta p {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  line-height: 1.7;
+}

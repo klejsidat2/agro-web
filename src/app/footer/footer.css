@@ -1,0 +1,70 @@
+footer {
+  margin-top: 4rem;
+  padding: 3rem 1.5rem 1.5rem;
+  background: var(--ink);
+  color: #b9c4a9;
+  border-top: 2px solid var(--green);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.3fr;
+  gap: 2rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+}
+
+.brand {
+  margin: 0;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.motto {
+  margin: 0.3rem 0 0;
+  font-style: italic;
+  color: #d7e0c6;
+}
+.since {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h4 {
+  margin: 0 0 0.4rem;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+}
+
+a {
+  color: #d7e0c6;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--green);
+}
+
+.copy {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.82rem;
+}
+
+/* Në telefon: kolonat njëra poshtë tjetrës */
+@media (max-width: 760px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}

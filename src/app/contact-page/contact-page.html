@@ -1,0 +1,65 @@
+<section class="page">
+  <header class="head">
+    <p class="kicker">{{ 'CONTACT.KICKER' | translate }}</p>
+    <h1>{{ 'CONTACT.TITLE' | translate }}</h1>
+    <span class="rule"></span>
+    <p class="lead">{{ 'CONTACT.LEAD' | translate }}</p>
+  </header>
+
+  <div class="cards">
+    <div class="card">
+      <span class="icon">📍</span>
+      <h3>{{ 'CONTACT.ADDRESS' | translate }}</h3>
+      <p>{{ site.address }}</p>
+    </div>
+
+    <div class="card">
+      <span class="icon">📞</span>
+      <h3>{{ 'CONTACT.PHONE' | translate }}</h3>
+      <p><a [href]="'tel:' + site.phoneHref">{{ site.phone }}</a></p>
+      <p>
+        <a [href]="'https://wa.me/' + site.whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="icon">✉️</span>
+      <h3>{{ 'CONTACT.EMAIL' | translate }}</h3>
+      <p><a [href]="'mailto:' + site.email">{{ site.email }}</a></p>
+    </div>
+
+    <div class="card">
+      <span class="icon">🕒</span>
+      <h3>{{ 'CONTACT.HOURS' | translate }}</h3>
+      @for (h of site.hours; track h.days) {
+        <p>
+          {{ h.days | translate }}<br />
+          <strong>{{ h.time }}</strong>
+        </p>
+      }
+    </div>
+  </div>
+
+  <div class="location">
+    <div class="loc-head">
+      <div>
+        <p class="kicker">{{ 'CONTACT.LOCATION_KICKER' | translate }}</p>
+        <h2>{{ 'CONTACT.LOCATION_TITLE' | translate }}</h2>
+        <p class="addr">{{ site.address }}</p>
+      </div>
+      <a class="btn" [href]="directionsUrl" target="_blank" rel="noopener">
+        {{ 'CONTACT.DIRECTIONS' | translate }}
+      </a>
+    </div>
+
+    <div class="map">
+      <iframe
+        [src]="mapUrl"
+        [title]="'CONTACT.LOCATION_TITLE' | translate"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</section>

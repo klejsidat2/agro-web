@@ -1,0 +1,78 @@
+<section class="page">
+  @if (product(); as p) {
+    <nav class="crumbs">
+      <a routerLink="/products">{{ 'PRODUCT.CATEGORIES' | translate }}</a>
+      <span>/</span>
+      <a [routerLink]="['/products', category()]">{{ categoryInfo()?.name | loc }}</a>
+      <span>/</span>
+      <strong>{{ p.name }}</strong>
+    </nav>
+
+    <div class="layout">
+      <div class="photo">
+        @if (p.image) {
+          <img [src]="p.image" [alt]="p.name" />
+        } @else {
+          <span>{{ 'PRODUCT.NO_PHOTO' | translate }}</span>
+        }
+      </div>
+
+      <div class="info">
+        <span class="cat">{{ categoryInfo()?.name | loc }}</span>
+        <h1>{{ p.name }}</h1>
+        <span class="rule"></span>
+
+        <p class="desc">{{ p.description | loc }}</p>
+
+        @if (p.packaging) {
+          <div class="row">
+            <h3>{{ 'PRODUCT.PACKAGING' | translate }}</h3>
+            <div class="tags">
+              @for (pk of p.packaging; track pk) {
+                <span>{{ pk }}</span>
+              }
+            </div>
+          </div>
+        }
+
+        @if (p.usage) {
+          <div class="usage">
+            <h3>{{ 'PRODUCT.USAGE' | translate }}</h3>
+            <p>{{ p.usage | loc }}</p>
+          </div>
+        }
+
+        <div class="actions">
+          <a
+            class="btn green"
+            [href]="whatsapp('PRODUCT.WHATSAPP_TEXT' | translate: { name: p.name })"
+            target="_blank"
+            rel="noopener"
+          >
+            {{ 'PRODUCT.ASK_WHATSAPP' | translate }}
+          </a>
+          <a class="btn dark" [href]="'tel:' + site.phoneHref">{{ 'PRODUCT.CALL' | translate }}</a>
+        </div>
+        <p class="note">{{ 'PRODUCT.NOTE' | translate }}</p>
+      </div>
+    </div>
+
+    @if (related().length > 0) {
+      <div class="related">
+        <h2>{{ 'PRODUCT.RELATED' | translate }}</h2>
+        <div class="grid">
+          @for (r of related(); track r.id) {
+            <a class="card" [routerLink]="['/products', category(), r.id]">
+              <h3>{{ r.name }}</h3>
+              <p>{{ r.shortDescription | loc }}</p>
+              <span class="more">{{ 'PRODUCT.DETAILS' | translate }}</span>
+            </a>
+          }
+        </div>
+      </div>
+    }
+  } @else {
+    <a routerLink="/products" class="back">{{ 'CATEGORY.BACK' | translate }}</a>
+    <p class="empty">{{ 'PRODUCT.NOT_FOUND' | translate }}</p>
+  }
+</section>
